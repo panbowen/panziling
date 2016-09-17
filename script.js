@@ -1,9 +1,10 @@
 var app = angular.module('plunker', []);
 
 app.controller('MainCtrl', function($scope) {
-  $scope.items1 = [1,2,3,4,5];
-  $scope.items2 = [1,2,3,4,5,6,7,8,9,10];
-}).directive("owlCarousel", function() {
+  $scope.items1 = [1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5];
+})
+
+app.directive("owlCarousel", function() {
 	return {
 		restrict: 'E',
 		transclude: false,
@@ -23,7 +24,7 @@ app.controller('MainCtrl', function($scope) {
 		}
 	};
 })
-.directive('owlCarouselItem', [function() {
+app.directive('owlCarouselItem', [function() {
 	return {
 		restrict: 'A',
 		transclude: false,
